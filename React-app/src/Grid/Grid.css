@@ -1,0 +1,9 @@
+.row .card{
+  display: inline-flex;
+}
+
+.grid {
+  background-color: #e36c45;
+  border-radius: 10px;
+  display: block;
+}
