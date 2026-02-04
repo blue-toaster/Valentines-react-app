@@ -5,11 +5,19 @@ import React, {useState} from 'react';
 
 function Card(prop) {
 
+  const [num, setNum] = useState(Infinity)
+
   const [flipped, setFlipped] = useState(false);
 
   const handleClick = () => {
-    setFlipped(!flipped);
+    setFlipped(true);
   }
+
+  if (flipped && num == Infinity) {
+    setNum(prop.num);
+  }
+
+  
 
   return (
     <div className={`card ${flipped ? 'flipped' : ''}`}>
@@ -17,8 +25,8 @@ function Card(prop) {
         <div className='card-front'>
           <p>&#128151;</p>
         </div>
-        <div className='card-back'>
-          <p>temp</p>
+        <div className={`card-back ${(num == 8 || num == 9) ? 'special' : ''}`}>
+          <p>{prop.list[num]}</p>
         </div>
         
       </div>

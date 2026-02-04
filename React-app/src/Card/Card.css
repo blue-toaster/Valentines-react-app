@@ -41,3 +41,7 @@
 .card-back {
   transform: rotateY(180deg);
 }
+
+.card-back.special p {
+  font-size: 18px;
+}
