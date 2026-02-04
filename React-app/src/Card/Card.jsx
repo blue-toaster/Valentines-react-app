@@ -28,7 +28,6 @@ function Card(prop) {
         <div className={`card-back ${(num == 8 || num == 9) ? 'special' : ''}`}>
           <p>{prop.list[num]}</p>
         </div>
-        
       </div>
     </div>
    
